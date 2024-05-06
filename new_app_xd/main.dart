@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Micromimic App',
       home: MicromimicScreen(),
     );
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MicromimicScreen extends StatefulWidget {
+  const MicromimicScreen({super.key});
+
   @override
   _MicromimicScreenState createState() => _MicromimicScreenState();
 }
@@ -28,7 +32,7 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Micromimic App'),
+        title: const Text('Micromimic App'),
         backgroundColor: Colors.green,
       ),
       body: Padding(
@@ -40,17 +44,17 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Medición de Temperatura',
                     style: TextStyle(fontSize: 20),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     children: [
                       Expanded(
                         child: TextField(
                           keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: 'Temperature',
                             border: OutlineInputBorder(),
                           ),
@@ -59,7 +63,7 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                           },
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       ElevatedButton(
                         onPressed: () {
                           if (inputValue.isNotEmpty) {
@@ -72,16 +76,16 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                             });
                           }
                         },
-                        child: Text('Add'),
+                        child: const Text('Add'),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Historical Values (Newest 5):',
                     style: TextStyle(fontSize: 18),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Expanded(
                     child: ListView.builder(
                       itemCount: temperatureValues.length,
@@ -95,11 +99,11 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                 ],
               ),
             ),
-            SizedBox(width: 20),
+            const SizedBox(width: 20),
             Flexible(
               child: Column(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 200,
                     height: 200,
                     child: LineChart(
@@ -108,7 +112,7 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                         titlesData: FlTitlesData(
                           bottomTitles: SideTitles(
                             showTitles: true,
-                            getTextStyles: (value) => TextStyle(fontSize: 10, color: Colors.black),
+                            getTextStyles: (value) => const TextStyle(fontSize: 10, color: Colors.black),
                             getTitles: (value) {
                               // Customizing X axis titles (bottom)
                               switch (value.toInt()) {
@@ -129,7 +133,7 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                           ),
                           leftTitles: SideTitles(
                             showTitles: true,
-                            getTextStyles: (value) => TextStyle(fontSize: 10, color: Colors.black),
+                            getTextStyles: (value) => const TextStyle(fontSize: 10, color: Colors.black),
                             getTitles: (value) {
                               // Customizing Y axis titles (left)
                               return value.toInt().toString();
@@ -152,10 +156,10 @@ class _MicromimicScreenState extends State<MicromimicScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     _getTemperatureStatus(),
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ],
               ),
