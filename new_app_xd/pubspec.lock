@@ -77,10 +77,10 @@ packages:
     dependency: transitive
     description:
       name: ffi
-      sha256: "493f37e7df1804778ff3a53bd691d8692ddf69702cf4c1c1096a2e41b4779e21"
+      sha256: "13a6ccf6a459a125b3fcdb6ec73bd5ff90822e071207c663bfd1f70062d51d18"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.2"
+    version: "1.2.1"
   fl_chart:
     dependency: "direct main"
     description:
@@ -135,10 +135,10 @@ packages:
     dependency: "direct main"
     description:
       name: libserialport
-      sha256: "392e1592def65282429832ec66fa25e9e163d3b37716b97691482e2406720727"
+      sha256: eddc9e648270ba47ab71e5551b63e40f1d7e157d88c7e95ed67474453f85dfe0
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.0+1"
+    version: "0.2.0+3"
   lints:
     dependency: transitive
     description:
