@@ -1,1 +1,8 @@
 # Micromimic
+En el repositorio de GitHub se encuentra el diseño de una interfaz que busca desplegar los datos obtenidos por conexión vía Bluetooth o por Puerto Serial de un microcontrolador Arduino, el microcontrolador tiene como función simular una medición fisiológica haciendo uso de un sensor. En el proyecto presente, se definió el uso de un termistor DS18B20.
+Se escogió un termistor por la facilidad que ofrece de hacer una analogía con este sistema a una variable fisiológica como lo es la temperatura corporal. Está definido que un rango de temperatura que se considera sano reside entre los 36.5°C y 37°C, mediciones de anormalidad representan hipotermia y fiebre (menor a 35°C y mayor a 38°C respectivamente.
+La interfaz busca ofrecer retroalimentación al usuario sobre el rango en el que su temperatura interna se encuentra.
+Para el diseño y desarrollo de la interfaz en primera instancia se optó por hacer uso de Flutter, por recomendación del encargado de módulo. Sin embargo, múltiples miembros del equipo presentaron complicaciones para hacer la conexión tanto vía bluetooth como puerto serial, complicaciones a las que no se pudo encontrar una solución y estaban presentando un mayor inconveniente para la poca complejidad que el diseño requería.
+De igual manera, se desarrolló un mock como una interfaz funcional que en lugar de recibir datos por las vías mencionadas anteriormente, requiere una entrada manual de datos.
+Como alternativa, se propuso el uso de MATLAB para hacer el diseño de esta interfaz. 
+El app funcional en MATLAB se puede encontrar en el repositorio bajo el directorio  ‘appMatlab/app_fis.mlapp’.
